@@ -68,7 +68,7 @@ public class LoginController {
 			throws Exception {
 
 		if (backUrl != null) {
-			response.sendRedirect(StringUtil.appendUrlParameter(backUrl, "xtoken", xtoken));
+			response.sendRedirect(StringUtil.appendUrlParameter(backUrl, "__xtoken_param__=", xtoken));
 			return null;
 		} else {
 			map.put("apps", config.getAuthedApps(loginUser));
